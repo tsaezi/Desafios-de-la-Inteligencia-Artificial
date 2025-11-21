@@ -1,0 +1,37 @@
+En una fiesta de informáticos con capacidad de 1000 personas
+se cobra la entrada a los asistentes con los siguientes valores
+
+Joven <- 100.000
+Adulto <- 400.000
+Adulto Mayor <- 550.000
+
+Se debe almacenar los valores según el tipo de persona y también almacenar el valor de las entradas vendidas
+
+Algoritmo
+	Definir tipoPersona como carácter
+	Definir entradas, i como entero
+	Dimensión tipoPersona[5], entradas[5]
+
+	Para i<-0 hasta 4 con paso 1 hacer
+		Repetir
+		  Escribir "Ingrese edad"
+		  Leer edad
+		Hasta edad>=18
+		
+		Si edad<30 entonces
+		   tipoPersona[i]="Joven"
+		   entradas[i] = 100000
+		Sino
+			Si edad<=60 Entonces
+				tipoPersona[i]="Adulto"
+		   		entradas[i] = 400000
+			Sino
+				tipoPersona[i]="Adulto Mayor"
+		   		entradas[i] = 550000
+			Finsi	
+		FinSi
+	FinPara	
+	Para i<-0 hasta 4 con paso 1 hacer
+		Escribir tipoPersona[i]," = ", entradas[i]
+	FinPara
+FinAlgoritmo
